@@ -1,48 +1,72 @@
+/* Reset box sizing (THIS FIXES ALIGNMENT ISSUES) */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f3f4f6;
 }
 
+/* Center the card */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+/* Card */
 .auth-box {
   background: white;
-  width: 380px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Title */
 .auth-title {
   text-align: center;
   color: #2e7d32;
   margin-bottom: 20px;
+  font-size: 22px;
 }
 
+/* Inputs & Select (PERFECT ALIGNMENT FIX) */
 .auth-input,
 .auth-select {
+  display: block;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  height: 42px;
+  padding: 0 12px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
   font-size: 14px;
+  background-color: #ffffff;
 }
 
+
+
+/* Focus state */
+.auth-input:focus,
+.auth-select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+/* Button */
 .auth-button {
   width: 100%;
-  padding: 12px;
+  height: 42px;
+  margin-top: 6px;
   background-color: #2e7d32;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 5px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -50,14 +74,17 @@ body {
   background-color: #256428;
 }
 
+/* Bottom text */
 .auth-text {
   text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #4b5563;
 }
 
+/* Link */
 .auth-link {
   color: #2e7d32;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
 }
